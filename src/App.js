@@ -7,6 +7,8 @@ import FeaturesSection from './components/FeaturesSection';
 import ContentSection2 from './components/ContentSection2';
 import CompaniesLogoSection from './components/CompaniesLogoSection';
 import ContentSection3 from './components/ContentSection3';
+import ContentSection4 from './components/ContentSection4';
+import ContentSection5 from './components/ContentSection5';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <CompaniesLogoSection />
       <ContentSection3 />
       <BannerSection />
+      <ContentSection4 />
+      <ContentSection5 />
     </div>
   );
 }
