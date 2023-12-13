@@ -4,6 +4,7 @@ import HeroSection1 from './components/HeroSection1';
 import BannerSection from './components/BannerSection';
 import ContentSection from './components/ContentSection';
 import FeaturesSection from './components/FeaturesSection';
+import ContentSection2 from './components/ContentSection2';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BannerSection />
       <ContentSection />
       <FeaturesSection />
+      <ContentSection2 />
     </div>
   );
 }
