@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import Person1 from "../assets/person-1.png";
 import Person2 from "../assets/person-2.png";
 import Person3 from "../assets/person-3.png";
@@ -45,12 +45,12 @@ const ContentSection2 = () => {
               <span className="font-semibold">statement of faith.</span>
             </p>
             <div className="flex max-sm-custom:flex-col flex-row items-center col-span-12 lg:col-span-5 justify-center gap-4 lg:justify-self-start">
-              <a
-                href="/"
+              <Link
+                to="/register"
                 className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 my-3 uppercase"
               >
                 Register for free
-              </a>
+              </Link>
               <a
                 href="/"
                 className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-white  uppercase"
