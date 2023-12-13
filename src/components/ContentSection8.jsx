@@ -14,7 +14,7 @@ const ContentSection8 = () => {
             />
           </div>
           <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <div class="text-3xl">
+            <div className="text-3xl">
               <svg
                 fill="none"
                 viewBox="0 0 37 35"
@@ -24,7 +24,7 @@ const ContentSection8 = () => {
               >
                 <filter
                   id="a"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                   filterUnits="userSpaceOnUse"
                   height="38.125"
                   width="35.4949"
@@ -32,7 +32,7 @@ const ContentSection8 = () => {
                   y="-3.5625"
                 >
                   <feFlood
-                    flood-opacity="0"
+                    floodOpacity="0"
                     result="BackgroundImageFix"
                   ></feFlood>
                   <feBlend

@@ -41,10 +41,10 @@ const ContentSection6 = () => {
                     width="44"
                     height="46.0527"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
                     <feFlood
-                      flood-opacity="0"
+                      floodOpacity="0"
                       result="BackgroundImageFix"
                     ></feFlood>
                     <feColorMatrix
@@ -79,10 +79,10 @@ const ContentSection6 = () => {
                     width="16"
                     height="20"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
                     <feFlood
-                      flood-opacity="0"
+                      floodOpacity="0"
                       result="BackgroundImageFix"
                     ></feFlood>
                     <feBlend
@@ -122,10 +122,10 @@ const ContentSection6 = () => {
                     width="16"
                     height="20"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
                     <feFlood
-                      flood-opacity="0"
+                      floodOpacity="0"
                       result="BackgroundImageFix"
                     ></feFlood>
                     <feBlend
@@ -165,10 +165,10 @@ const ContentSection6 = () => {
                     width="16"
                     height="20"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
                     <feFlood
-                      flood-opacity="0"
+                      floodOpacity="0"
                       result="BackgroundImageFix"
                     ></feFlood>
                     <feBlend
