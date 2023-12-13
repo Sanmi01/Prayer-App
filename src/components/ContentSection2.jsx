@@ -51,12 +51,12 @@ const ContentSection2 = () => {
               >
                 Register for free
               </Link>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-white  uppercase"
               >
                 Schedule a tour
-              </a>
+              </Link>
             </div>
             <div className="flex flex-col gap-2 mt-8 lg:hidden">
               <div className="flex flex-row gap-2 justify-center">

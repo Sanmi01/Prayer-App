@@ -22,6 +22,7 @@ module.exports = {
         },
         "brand-gray-light": "#F3F3F3",
         "brand-blue-dark": "#252E42",
+        "brand-gray": "#F7F7F7",
       },
     },
     screens: {
