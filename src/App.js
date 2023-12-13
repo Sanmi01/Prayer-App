@@ -6,6 +6,7 @@ import ContentSection from './components/ContentSection';
 import FeaturesSection from './components/FeaturesSection';
 import ContentSection2 from './components/ContentSection2';
 import CompaniesLogoSection from './components/CompaniesLogoSection';
+import ContentSection3 from './components/ContentSection3';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <FeaturesSection />
       <ContentSection2 />
       <CompaniesLogoSection />
+      <ContentSection3 />
+      <BannerSection />
     </div>
   );
 }
