@@ -12,6 +12,8 @@ import ContentSection5 from './components/ContentSection5';
 import ContentSection6 from './components/ContentSection6';
 import ContentSection7 from './components/ContentSection7';
 import ContentSection8 from './components/ContentSection8';
+import CTA from './components/CTA';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
       <ContentSection7 />
       <ContentSection8 />
       <BannerSection />
+      <CTA />
+      <Footer />
     </div>
   );
 }
