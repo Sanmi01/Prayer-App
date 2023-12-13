@@ -9,6 +9,9 @@ import CompaniesLogoSection from './components/CompaniesLogoSection';
 import ContentSection3 from './components/ContentSection3';
 import ContentSection4 from './components/ContentSection4';
 import ContentSection5 from './components/ContentSection5';
+import ContentSection6 from './components/ContentSection6';
+import ContentSection7 from './components/ContentSection7';
+import ContentSection8 from './components/ContentSection8';
 
 function App() {
   return (
@@ -24,6 +27,10 @@ function App() {
       <BannerSection />
       <ContentSection4 />
       <ContentSection5 />
+      <ContentSection6 />
+      <ContentSection7 />
+      <ContentSection8 />
+      <BannerSection />
     </div>
   );
 }
