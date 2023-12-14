@@ -20,10 +20,10 @@ const Prayer = ({prayer}) => {
               {prayer?.message}
             </p>
             <div className="flex items-center gap-2">
-              {!prayed && <button onClick={prayerReact} className="active:scale-95 uppercase inline-flex items-center justify-center font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none bg-light-blue mr-2 h-fit rounded-md p-1 text-xs">
+              {!prayed && <button onClick={prayerReact} className="active:scale-95 uppercase inline-flex items-center justify-center font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none bg-light-blue mr-2 h-fit rounded-md p-1 text-2xs">
                 + Pray
               </button>}
-              {prayed && <button className="active:scale-95 uppercase inline-flex items-center justify-center font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none  bg-light-blue mr-2 h-fit rounded-md p-1 text-xs" disabled>+ 
+              {prayed && <button className="active:scale-95 uppercase inline-flex items-center justify-center font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none  bg-light-blue mr-2 h-fit rounded-md p-1 text-2xs" disabled>+ 
               Prayed
               </button>}
 
