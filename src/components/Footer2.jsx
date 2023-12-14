@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const Footer2 = () => {
   return (
-    <footer className="fixed bottom-0 w-full">
+    <footer className="fixed bottom-0 w-full bg-brand-gray">
       <nav>
         <ul className="flex w-full flex-row justify-center gap-4 pb-3 pt-4">
           <li>
             <Link
               className="flex h-11 w-11 flex-col items-center justify-end border-b-2 border-transparent text-[8px] font-black uppercase text-background-copy"
-              to="/"
+              to="/prayerpage"
             >
               <div className="h-5 w-5">
                 <svg
@@ -51,7 +51,7 @@ const Footer2 = () => {
           <li>
             <Link
               className="flex h-11 w-11 flex-col items-center justify-end border-b-2 text-[8px] font-black uppercase text-background-copy border-accent"
-              to="/"
+              to="/register"
             >
               <div className="w-4">
                 <svg

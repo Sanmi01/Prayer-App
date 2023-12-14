@@ -21,8 +21,10 @@ module.exports = {
           950: "#070e10",
         },
         "brand-gray-light": "#F3F3F3",
+        "brand-gray-dark": "#E1E1E1",
         "brand-blue-dark": "#252E42",
         "brand-gray": "#F7F7F7",
+        "light-blue": "#8CCFE0"
       },
     },
     screens: {
