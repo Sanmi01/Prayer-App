@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Person1 from "../assets/person-1.png";
+import PrayerModal from "./PrayerModal";
 
 const Prayer = ({prayer}) => {
     const [prayed, setPrayed] = useState(prayer?.prayed)
@@ -10,7 +11,13 @@ const Prayer = ({prayer}) => {
         setPrayerReactions((value) => value + 1)
     }
 
+    const [showModal, setShowModal] = useState(false);
+    const toggleModal = () => {
+      setShowModal((value) => !value)
+    }
+
   return (
+    <>
     <div className="mb-6">
       <div className="flex items-start gap-2.5">
         <div className="flex flex-col gap-1 w-full">
@@ -293,6 +300,7 @@ const Prayer = ({prayer}) => {
             <button
               className="active:scale-95 uppercase inline-flex items-center justify-center font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50  disabled:pointer-events-none bg-light-blue h-8 py-2 text-xs absolute bottom-0 right-0 rounded-none rounded-tl-3xl px-6"
               type="button"
+              onClick={toggleModal}
             >
               View
             </button>
@@ -311,6 +319,8 @@ const Prayer = ({prayer}) => {
         </div>
       </div>
     </div>
+    {showModal && (<PrayerModal toggleModal={toggleModal} prayer={prayer?.message} />)}
+    </>
   );
 };
 

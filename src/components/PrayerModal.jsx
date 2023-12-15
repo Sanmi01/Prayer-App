@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const PrayerModal = ({ setShowModal }) => {
+const PrayerModal = ({ toggleModal, prayer }) => {
   const [count, setCount] = useState(0);
   return (
     <>
@@ -14,7 +14,7 @@ const PrayerModal = ({ setShowModal }) => {
                 Request Prayer
               </h3>
               <button
-                onClick={() => setShowModal((value) => !value)}
+                onClick={toggleModal}
                 type="button"
                 className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                 data-modal-hide="default-modal"
@@ -41,6 +41,7 @@ const PrayerModal = ({ setShowModal }) => {
               {/* <label for="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label> */}
               <textarea
                 onChange={(e) => setCount(e.target.value.length)}
+                value={prayer?? ""}
                 id="message"
                 rows="4"
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -49,7 +50,7 @@ const PrayerModal = ({ setShowModal }) => {
               ></textarea>
             </div>
             {/* <!-- Modal footer --> */}
-            <div className="mx-auto w-full max-w-2xl px-8 pb-4">
+           {!prayer && <div className="mx-auto w-full max-w-2xl px-8 pb-4">
             <p className="text-center font-light text-xs mb-2">
                 {" "}
                 {1000 - count} Characters Remaining
@@ -57,7 +58,7 @@ const PrayerModal = ({ setShowModal }) => {
               <button
                 className="active:scale-95 uppercase inline-flex items-center justify-center rounded font-bold focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2  bg-[#18181B] h-8 py-2 text-xs w-full text-white px-4 disabled:opacity-50 disabled:pointer-events-none"
                 type="button"
-                onClick={() => setShowModal((value) => !value)}
+                onClick={toggleModal}
                 disabled={count === 0}
               >
                 <svg
@@ -283,7 +284,7 @@ const PrayerModal = ({ setShowModal }) => {
                 </svg>
                 Request Prayer
               </button>
-            </div>
+            </div>}
           </div>
         </div>
       </div>
