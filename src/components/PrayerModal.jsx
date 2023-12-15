@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 
-const PrayerModal = ({ toggleModal, prayer }) => {
-  const [count, setCount] = useState(0);
+const PrayerModal = ({ toggleModal, prayer, AddPrayer }) => {
+  const [prayerMessage, setPrayerMessage] = useState(prayer || "");
+
+  const handleChange = (e) => {
+    setPrayerMessage(e.target.value);
+  };
+
+  const submitPrayer = () => {
+    AddPrayer(prayerMessage)
+    toggleModal()
+  }
+
   return (
     <>
       <div className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -40,26 +50,26 @@ const PrayerModal = ({ toggleModal, prayer }) => {
             <div className="p-4 md:p-5 space-y-4">
               {/* <label for="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label> */}
               <textarea
-                onChange={(e) => setCount(e.target.value.length)}
-                value={prayer?? ""}
+                onChange={handleChange} 
+                value={prayerMessage}
                 id="message"
                 rows="4"
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Share your request here and our community will pray for you."
-                maxlength="1000"
+                maxLength="1000"
               ></textarea>
             </div>
             {/* <!-- Modal footer --> */}
            {!prayer && <div className="mx-auto w-full max-w-2xl px-8 pb-4">
             <p className="text-center font-light text-xs mb-2">
                 {" "}
-                {1000 - count} Characters Remaining
+                {1000 - prayerMessage.length} Characters Remaining
               </p>
               <button
                 className="active:scale-95 uppercase inline-flex items-center justify-center rounded font-bold focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2  bg-[#18181B] h-8 py-2 text-xs w-full text-white px-4 disabled:opacity-50 disabled:pointer-events-none"
                 type="button"
-                onClick={toggleModal}
-                disabled={count === 0}
+                onClick={submitPrayer}
+                disabled={prayerMessage.length === 0}
               >
                 <svg
                   className="mr-2 w-5"

@@ -7,7 +7,7 @@ const PrayerWall = () => {
   const toggleModal = () => {
     setShowModal((value) => !value)
   }
-  const prayers = [
+  const [prayers, setPrayers] = useState([
     {
       id: 1,
       message: "Thank you, Lord",
@@ -54,7 +54,21 @@ const PrayerWall = () => {
       name: "John",
       time: "2 months ago",
     },
-  ];
+  ]);
+
+  const AddPrayer = (prayer) => {
+    const newPrayer = {
+      id: prayer,
+      message: prayer,
+      prayerReactions: 0,
+      messageReactions: 0,
+      prayed: false,
+      time: "Now"
+    };
+
+    setPrayers(prevPrayers => [newPrayer, ...prevPrayers]);
+  };
+  
 
   return (
     <>
@@ -410,7 +424,7 @@ const PrayerWall = () => {
           <Prayer key={prayer.id} prayer={prayer} />
         ))}
       </div>
-      {showModal && (<PrayerModal toggleModal={toggleModal} />)}
+      {showModal && (<PrayerModal toggleModal={toggleModal} AddPrayer={AddPrayer} />)}
     </>
   );
 };
